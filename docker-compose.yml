@@ -12,7 +12,7 @@ services:
     networks:
       - ai_chat_network
     command: >
-      sh -c "chainlit run -w src/main.py --host 0.0.0.0"
+      sh -c "python src/store_data.py && chainlit run -w src/main.py --host 0.0.0.0"
   
   postgres:
     image: ankane/pgvector
