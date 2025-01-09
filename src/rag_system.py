@@ -9,6 +9,7 @@ class RAGSYTEM:
         self.db_connection_str = db_connection_str
         self.data_path = data_path
 
+        print("db_connection_str-rag", db_connection_str)
         with psycopg.connect(db_connection_str) as conn:
             with conn.cursor() as cur:
                 cur.execute("CREATE EXTENSION IF NOT EXISTS vector;")
